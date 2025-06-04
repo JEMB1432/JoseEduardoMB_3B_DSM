@@ -18,6 +18,8 @@ public class Main {
         if(!usuarioSeguro.estaInicializado()){
             System.out.println("Ingrese correctamente los datos");
         }else {
+            System.out.println("-------------------------------------\n");
+            System.out.println("LOGIN");
             System.out.println("Ingrese su contraseña");
             String contrasena = sc.nextLine();
 
