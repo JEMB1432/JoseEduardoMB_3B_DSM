@@ -1,20 +1,20 @@
 package Models;
 
 public class Inventario {
-    private int tamano;
 
     private Producto[] productos;
 
     public Inventario(int tamano) {
-        this.tamano = tamano;
         this.productos = new Producto[tamano];
     }
 
     public boolean agregarProducto(Producto producto) {
         for(int i = 0; i < productos.length; i++) {
-            if(productos[i] == null){
-                productos[i] = producto;
-                return true;
+            if(producto.getEstado()){
+                if(productos[i] == null){
+                    productos[i] = producto;
+                    return true;
+                }
             }
         }
         return false;
@@ -22,9 +22,11 @@ public class Inventario {
 
     public boolean eliminarProducto(String codigo) {
         for(int i = 0; i < productos.length; i++) {
-            if(productos[i].getCodigo() == codigo){
-                productos[i] = null;
-                return true;
+            if(productos[i] != null){
+                if(productos[i].getCodigo().equals(codigo)){
+                    productos[i] = null;
+                    return true;
+                }
             }
         }
         return false;
@@ -32,8 +34,10 @@ public class Inventario {
 
     public Producto buscarProducto(String codigo) {
         for(int i = 0; i < productos.length; i++) {
-            if(productos[i].getCodigo() == codigo){
-                return productos[i];
+            if(productos[i] != null){
+                if(productos[i].getCodigo().equals(codigo)){
+                    return productos[i];
+                }
             }
         }
         return null;

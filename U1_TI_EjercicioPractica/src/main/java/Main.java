@@ -11,7 +11,7 @@ public class Main {
         Producto p4 = new Producto();
 
         p1.Validan("cod1", "pc", 5);
-        p2.Validan("cod2", "teclado", 4);
+        p2.Validan("cod2", "teclado", -4);
         p3.Validan("cod3", "mose", 3);
         p4.Validan("cod4", "pantalla", 2);
 
