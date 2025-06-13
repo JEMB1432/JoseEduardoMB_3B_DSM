@@ -1,7 +1,5 @@
 package JEMB;
-
 import JEMB.Models.Persona;
-
 import java.util.Scanner;
 
 public class Main {
