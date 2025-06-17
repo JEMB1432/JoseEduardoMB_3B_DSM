@@ -74,7 +74,7 @@ public class HelloApplication extends Application {
             cmbrol.getSelectionModel().clearSelection();
             lblResultado.setText("");
             root.setStyle("-fx-background-color: rgb(255,255,255);");
-            lblResultado.setStyle("-fx-text-fill: #232323;");
+            lblResultado.setStyle("-fx-background-color: #fff;");
             root.setMinHeight(600);
             root.setMaxWidth(400);
         });
